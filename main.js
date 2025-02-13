@@ -20,11 +20,11 @@ function decodeHtml(html) {
 
 const replaceChars = (str) => {
   return str
-    .replace('+', decodeHtml('&plus;'))
-    .replace('-', decodeHtml('&minus;'))
-    .replace('*', decodeHtml('&times;'))
-    .replace('/', decodeHtml('&divide;'))
-    .replace('.', decodeHtml(','));
+    .replaceAll('+', decodeHtml('&plus;'))
+    .replaceAll('-', decodeHtml('&minus;'))
+    .replaceAll('*', decodeHtml('&times;'))
+    .replaceAll('/', decodeHtml('&divide;'))
+    .replaceAll('.', decodeHtml(','));
 };
 
 const updateScreen = () => {
